@@ -32,14 +32,14 @@ const PY_DIST_FOLDER = 'py'
 const PY_FOLDER = 'main'
 const PY_MODULE = 'main'
 
-const guessPackaged = () => {
+const guessPackaged = () => { // 프로그램의 packaged 여부를 확인하는 함수. currentFolder/PY_DIST_FOLDER 정보의 존재 여부를 판별한다
   const fullPath = path.join(__dirname, PY_DIST_FOLDER)
   return require('fs').existsSync(fullPath)
 }
 
 const getScriptPath = () => { // 파이썬의 경로를 설정하는 함수
   if (!guessPackaged()) {
-    // guessPackaged 값이 존재하지 않는 경우 실행파일.py 값을 반환
+    // packaged 되지 않았다면 실행파일.py 값을 반환
     return path.join(__dirname, PY_FOLDER, PY_MODULE + '.py')
   }
   if (process.platform === 'win32') {
@@ -64,10 +64,10 @@ const createPyProc = () => {
   let script = getScriptPath()
 
   if (guessPackaged()) {
-    // guessPackaged 값이 존재하면 .exe 파일을 실행
+    // 프로그램이 packaged 되었다면 .exe 파일을 실행
     pyProc = require('child_process').execFile(script, [port])
   } else {
-    // guessPackaged 값이 존재하지 않으면 .py 파일을 실행
+    // 프로그램이 packaged 되지 않았다면 .py 파일을 실행
     pyProc = require('child_process').spawn('python', [script, port])
   }
 
@@ -78,6 +78,7 @@ const createPyProc = () => {
 
 }
 
+// 프로그램 종료시 값을 초기화시키는 함수
 const exitPyProc = () => {
   pyProc.kill()
   pyProc = null
