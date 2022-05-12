@@ -32,7 +32,9 @@ const PY_DIST_FOLDER = 'py'
 const PY_FOLDER = 'main'
 const PY_MODULE = 'main'
 
-const guessPackaged = () => { // 프로그램의 packaged 여부를 확인하는 함수. currentFolder/PY_DIST_FOLDER 정보의 존재 여부를 판별한다
+// 프로그램의 packaged 여부를 확인하는 함수. currentFolder/PY_DIST_FOLDER 정보의 존재 여부를 판별한다
+// ex) pyinstaller 를 사용하여 python 파일을 exe 화 하였다면 해당 폴더가 생성되었으므로 true
+const guessPackaged = () => {
   const fullPath = path.join(__dirname, PY_DIST_FOLDER)
   return require('fs').existsSync(fullPath)
 }
