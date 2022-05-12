@@ -37,7 +37,7 @@
     "target": "nsis"            /* windows 기반의 installer 제작 도구 */
   },
   "nsis": {
-    "oneClick": true            /* 설정의 변경없이 한번에 파일 설치가 된다 */
+    "oneClick": true            /* install 시 oneClick 설치 */
   }
 }
 ```
