@@ -1,0 +1,124 @@
+main{
+    height:100vh;
+    background: rgb(71, 61, 251);
+    background: linear-gradient(0deg, rgba(71, 61, 251, 1) 0%, rgba(0, 212, 255, 1) 100%);
+}
+
+.all_li{
+    /* remove bulletes */
+    list-style-type: none;
+}
+
+.header_hi {
+    
+    color: black;
+    font-size: smaller;
+}
+
+.header_name_label {
+    color: black;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input_country {
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 20px;
+}
+
+.input_country:enabled {
+    padding-left: 15px;
+}
+
+.input_region {
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 20px;
+}
+
+.input_region:enabled {
+    padding-left: 15px;
+}
+
+.input_city {
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 20px;
+}
+
+.input_city:enabled {
+    padding-left: 15px;
+}
+
+.btns_group {
+    float: right;
+    position: relative;
+    width: 20%;
+    height: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+.btn_search {
+    border: none;
+    outline: none;
+    width: 80px;
+    height: 25px;
+}
+
+.mid_left_container {
+    height: 80vh;
+    position:relative;
+   /* background-color: aquamarine; */
+}
+
+.weather_text {
+    position:absolute;
+    top: 50%; left:50%; transform:translate(-50%, -50%);
+    color: wheat;
+    font-size: 1200%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.weather_text.rounded::after {
+    content:'';
+    position: absolute;
+    height: 25px;
+    width:25px;
+    border-radius: 50% !important;
+    background-color: wheat;
+    display:inline-block;
+}
+/*
+.rounded {
+    position: absolute;
+    top: 25%; right:15%;
+    height: 25px;
+    width:25px;
+    border-radius: 50% !important;
+    background-color: wheat;
+    display:inline-block;
+}
+*/
+
+.mid_right_container {
+    height: 80vh;
+    position:relative;
+    /* background-color: aquamarine; */
+}
+
+.mid_right_container .right_content{
+    position: absolute;
+    top: 50%; transform:translateY(-50%);
+    padding-left:70px;
+}
+
+.weather_det_text {
+    font-size: medium;
+}

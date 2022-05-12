@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resources/css/dashboard.css">
+    <!-- electron에서의 jquery 로딩 -->
+    <script>
+        window.$ = window.jQuery = require('jquery');
+    </script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="label_group">
+                        <label for="" class="header_hi">hi</label>
+                        <label for="" class="header_name_label">Code Pitman</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputs_group">
+                        <li class="all_li"><input class="input_country" id="input_country" placeholder="Country"></li>
+                        <li class="all_li"><input class="input_region" id="input_region" placeholder="Region"></li>
+                        <li class="all_li"><input class="input_city" id="input_city" placeholder="City"></li>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="btns_group">
+                        <li class="all_li"><button class="btn_search" id="btn_search">Search</button></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="mid_left_container">
+                        <div>
+                            <label for="" class="weather_text" id="weather_text"></label>
+                            <div class=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="mid_right_container">
+                        <div class="right_content">
+                            <li class="all_li"><label for="" class="weather_det_text">Humidity : </label><label for="" class="weather_det_text" id="weather_det_humidi"></label><label for="" class="weather_det_text"> %</label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Wind : </label><label for="" class="weather_det_text" id="weather_det_windkmh"></label><label for="" class="weather_det_text"> %</label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Wind : </label><label for="" class="weather_det_text" id="weather_det_windmph"></label><label for="" class="weather_det_text"> %</label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Wind Direction : </label><label for="" class="weather_det_text" id="weather_det_winddir"></label><label for="" class="weather_det_text"> </label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Temp : </label><label for="" class="weather_det_text" id="weather_det_tempf"></label><label for="" class="weather_det_text"> F</label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">UV : </label><label for="" class="weather_det_text" id="weather_det_uv"></label><label for="" class="weather_det_text"> %</label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Preciption : </label><label for="" class="weather_det_text" id="weather_det_precip"></label><label for="" class="weather_det_text"> </label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Cloud Condition : </label><label for="" class="weather_det_text" id="weather_det_cldcondi"></label><label for="" class="weather_det_text"> </label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Latitude : </label><label for="" class="weather_det_text" id="weather_det_lat"></label><label for="" class="weather_det_text"> </label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Longitude : </label><label for="" class="weather_det_text" id="weather_det_long"></label><label for="" class="weather_det_text"> </label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Country : </label><label for="" class="weather_det_text" id="weather_det_country"></label><label for="" class="weather_det_text"> </label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Region : </label><label for="" class="weather_det_text" id="weather_det_region"></label><label for="" class="weather_det_text"> </label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">City : </label><label for="" class="weather_det_text" id="weather_det_city"></label><label for="" class="weather_det_text"> </label></li>
+                            <li class="all_li"><label for="" class="weather_det_text">Date and Time : </label><label for="" class="weather_det_text" id="weather_det_dateandtime"></label><label for="" class="weather_det_text"> </label></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="../resources/js/dashboard.js"></script>
+<script>
+    $(function(){
+        $("#btn_search").click(function(){
+            $("#weather_text").addClass('rounded');
+        })
+    })
+    
+</script>
+</html>
