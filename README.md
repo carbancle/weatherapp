@@ -24,7 +24,7 @@
 
 ### 작업 참고 사항
 1. electron-builder 을 사용하기 위해 package.json 에 설정한 값 (for windows)
-```script
+```javascript
 "scripts":{
   "build:wind-ia32": "electron-builder --win --ia32",
   "build:win-x64": "electron-builder --win --x64"
