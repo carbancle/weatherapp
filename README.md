@@ -26,7 +26,7 @@
 * local 환경에서 프로그램을 실행하기 위해서 필요한 설정
 ```javascript
 // python이 설치되지 않은 환경에서 실행 가능하도록 pyinstaller 을 사용해서 .py 파일을 .exe 파일로 변환
-// electron 실행 파일 .js 에 다음과 같은 내용 추가 (해당 weatherapp 에서 local server는 flask를 사용하였습니다)
+// electron 실행 파일 .js 에 다음과 같은 내용 추가 (해당 weatherapp 에서 local server는 flask를 사용했다)
 
 const PY_DIST_FOLDER = 'py'
 const PY_FOLDER = 'main'
